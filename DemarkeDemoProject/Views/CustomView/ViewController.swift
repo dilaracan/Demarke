@@ -83,7 +83,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 CollectionCell.setupCell(movie: myMovies[indexPath.row])
                 return CollectionCell
  
-             */
+        */
         }
         else {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTableViewCell", for: indexPath) as? SingleTableViewCell {

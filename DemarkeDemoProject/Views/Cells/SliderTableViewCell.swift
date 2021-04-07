@@ -9,6 +9,8 @@ import UIKit
 
 class SliderTableViewCell: UITableViewCell {
 
+    @IBOutlet var sliderImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +20,10 @@ class SliderTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func setupSliderCell(movie : movies){
+        
+        sliderImage.image = movie.image
     }
     
 }
