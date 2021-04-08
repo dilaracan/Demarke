@@ -4,34 +4,62 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="188" id="KGk-i7-Jjw" customClass="SliderTableViewCell" customModule="DemarkeDemoProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="343" height="188"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="215" id="KGk-i7-Jjw" customClass="SliderTableViewCell" customModule="DemarkeDemoProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="343" height="188"/>
+                <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-SF-osO">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="188"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="maD-82-nys">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YyQ-H4-Bfu">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2i-jD-j5d">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="215"/>
                     </imageView>
-                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gjr-b6-hK4">
-                        <rect key="frame" x="20" y="160" width="290" height="28"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="NC2-Q5-flM">
+                        <rect key="frame" x="20" y="176" width="348" height="28"/>
                     </pageControl>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="maD-82-nys" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0wT-gC-hN4"/>
+                    <constraint firstItem="maD-82-nys" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-55" id="8G2-3g-Oef"/>
+                    <constraint firstItem="B2i-jD-j5d" firstAttribute="leading" secondItem="maD-82-nys" secondAttribute="leading" id="IpN-b1-t7I"/>
+                    <constraint firstItem="NC2-Q5-flM" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="XQv-8i-ucL"/>
+                    <constraint firstItem="maD-82-nys" firstAttribute="trailing" secondItem="B2i-jD-j5d" secondAttribute="trailing" id="ZDu-50-exk"/>
+                    <constraint firstItem="maD-82-nys" firstAttribute="bottom" secondItem="B2i-jD-j5d" secondAttribute="bottom" id="fuR-tw-fQr"/>
+                    <constraint firstItem="NC2-Q5-flM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="jgG-hL-eob"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="NC2-Q5-flM" secondAttribute="trailing" constant="12" id="pJf-XX-woX"/>
+                    <constraint firstItem="B2i-jD-j5d" firstAttribute="top" secondItem="maD-82-nys" secondAttribute="top" id="uaH-JH-zvx"/>
+                    <constraint firstItem="maD-82-nys" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="y3t-0w-V20"/>
+                    <constraint firstItem="B2i-jD-j5d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-20" id="yVx-hJ-JLV"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="pageControl" destination="gjr-b6-hK4" id="Iqy-Tv-dRL"/>
-                <outlet property="sliderImageView" destination="B4I-SF-osO" id="A0Q-or-rVL"/>
+                <outlet property="pageControl" destination="NC2-Q5-flM" id="g0d-gz-9jh"/>
+                <outlet property="sliderCollectionView" destination="maD-82-nys" id="7U9-JC-Uqo"/>
+                <outlet property="sliderImageView" destination="B2i-jD-j5d" id="iJu-Gn-MT3"/>
             </connections>
-            <point key="canvasLocation" x="-258.69565217391306" y="12.053571428571429"/>
+            <point key="canvasLocation" x="-388.40579710144931" y="-6.3616071428571423"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

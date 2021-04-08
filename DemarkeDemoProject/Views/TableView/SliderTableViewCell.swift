@@ -2,25 +2,16 @@
 //  SliderTableViewCell.swift
 //  DemarkeDemoProject
 //
-//  Created by Dilara Can on 8.04.2021.
+//  Created by Dilara Can on 9.04.2021.
 //
 
 import UIKit
 
-class SliderTableViewCell: UITableViewCell{
-    
-    @IBOutlet var sliderImageView: UIImageView!
-    @IBOutlet var pageControl: UIPageControl!
-    @IBOutlet var sliderCollectionView: UICollectionView!
-    
-    var mySlider: [Slider] = []
-    var timer = Timer()
-    var counter = 0
+class SliderTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
