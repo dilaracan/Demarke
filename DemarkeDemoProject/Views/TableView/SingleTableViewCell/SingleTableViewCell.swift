@@ -8,8 +8,6 @@
 import UIKit
 
 class SingleTableViewCell: UITableViewCell {
-
-   
     
     @IBOutlet var label: UILabel!
     @IBOutlet var imageview: UIImageView!
@@ -22,7 +20,6 @@ class SingleTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-       
     }
     
     func setupCell(movie :movies) {

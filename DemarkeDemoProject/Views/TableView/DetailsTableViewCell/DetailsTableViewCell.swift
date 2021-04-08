@@ -9,6 +9,9 @@ import UIKit
 
 class DetailsTableViewCell: UITableViewCell {
 
+    @IBOutlet var detailsImageView: UIImageView!
+    
+    @IBOutlet var detailsLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +21,12 @@ class DetailsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupCell(movie :movies) {
+        detailsLabel.text = movie.name
+        detailsImageView.image = movie.image
+        
     }
     
 }
