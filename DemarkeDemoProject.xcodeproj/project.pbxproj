@@ -223,8 +223,8 @@
 		3FA12A07261F321E009A46E5 /* CollectionTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				3FA129EB261F1BCF009A46E5 /* CollectionTableViewCell.xib */,
 				3FA129EA261F1BCF009A46E5 /* CollectionTableViewCell.swift */,
+				3FA129EB261F1BCF009A46E5 /* CollectionTableViewCell.xib */,
 			);
 			path = CollectionTableViewCell;
 			sourceTree = "<group>";

@@ -33,7 +33,7 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
         super.awakeFromNib()
         
         
-        collectionView.register(SliderTableViewCell.nib(), forCellWithReuseIdentifier: SliderTableViewCell.identifier)
+        collectionView.register(SliderCollectionViewCell.nib(), forCellWithReuseIdentifier: SliderCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         

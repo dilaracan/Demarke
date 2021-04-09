@@ -6,7 +6,7 @@
 //
 
 import UIKit
-/*
+
 class SliderCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate,UICollectionViewDataSource {
    
     @IBOutlet var sliderImageView: UIImageView!
@@ -99,6 +99,6 @@ class SliderCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate,U
             return 0.0
         }
     
-    }*/
+    }
 
 
