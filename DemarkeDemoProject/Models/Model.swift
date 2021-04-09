@@ -11,10 +11,10 @@ import UIKit
 class Model {
     
     var text : String
-    var image : UIImage?
+    var image : UIImage
    
     
-    init(collectionText :String , collectionImage :UIImage? )
+    init(collectionText :String , collectionImage :UIImage )
     {
         text = collectionText
         image = collectionImage
