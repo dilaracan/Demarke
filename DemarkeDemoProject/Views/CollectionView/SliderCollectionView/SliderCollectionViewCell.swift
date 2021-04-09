@@ -17,7 +17,9 @@ class SliderCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate,U
     var timer = Timer()
     var counter = 0
     
+    
     static let identifier = "SliderCollectionViewCell"
+    
     
     static func nib() -> UINib{
         return UINib(nibName: "SliderCollectionViewCell", bundle: nil)
@@ -34,6 +36,12 @@ class SliderCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate,U
         }
         
     }
+    
+    func setupCell( slider: Slider){
+
+         sliderImageView.image = slider.image
+     }
+    
     //TIMER Selector
     
     @objc func changeImage () {
@@ -52,14 +60,8 @@ class SliderCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate,U
         }
     }
 
-   public func setupCell( slider: Slider){
-
-        sliderImageView.image = slider.image
-    }
-    
     
     //COLLECTION VIEW
-    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

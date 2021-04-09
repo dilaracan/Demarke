@@ -28,35 +28,39 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         createCollection ()
         createSlider()
         
-        
     }
     
     
     func initVars(){
         tableVıew.delegate = self
         tableVıew.dataSource = self
-        
        
-        
+       
         let nib = UINib(nibName: "SingleTableViewCell", bundle: nil)
         tableVıew.register(nib, forCellReuseIdentifier: "SingleTableViewCell")
         
         let nibCl = UINib(nibName: "CollectionTableViewCell", bundle: nil)
         tableVıew.register(nibCl, forCellReuseIdentifier: "CollectionTableViewCell")
         
-        let nibSl = UINib(nibName: "SliderCollectionViewCell", bundle: nil)
-        tableVıew.register(nibSl, forCellReuseIdentifier: "SliderCollectionViewCell")
+        let nibSl = UINib(nibName: "SliderTableViewCell", bundle: nil)
+        tableVıew.register(nibSl, forCellReuseIdentifier: "SliderTableViewCell")
         
     }
-    
+    //Collection
     func createCollection (){
         myModel.append(Model(collectionText:"Ayla" , collectionImage: UIImage(named: "collection1.jpg")))
-        /*
-        myModel.append(Model(text: "collection2.jpg", imageName: "Kapi")))
-        myModel.append(Model(text: "collection3.jpg", imageName: "The Night Gale")))
-        myModel.append(Model(text: "collection4.jpg", imageName: "Avatar")))
-        myModel.append(Model(text: "collection5.jpg", imageName: "Perfume"))) */
+        myModel.append(Model(collectionText:"Kapi" , collectionImage: UIImage(named: "collection2.jpg")))
+        myModel.append(Model(collectionText:"The Night Gale" , collectionImage: UIImage(named: "collection3.jpg")))
+        myModel.append(Model(collectionText:"Avatar" , collectionImage: UIImage(named: "collection4.jpg")))
+        myModel.append(Model(collectionText:"Perfume" , collectionImage: UIImage(named: "collection5.jpg")))
+        myModel.append(Model(collectionText:"Ayla" , collectionImage: UIImage(named: "collection1.jpg")))
+        myModel.append(Model(collectionText:"Kapi" , collectionImage: UIImage(named: "collection2.jpg")))
+        myModel.append(Model(collectionText:"The Night Gale" , collectionImage: UIImage(named: "collection3.jpg")))
+        myModel.append(Model(collectionText:"Avatar" , collectionImage: UIImage(named: "collection4.jpg")))
+        myModel.append(Model(collectionText:"Perfume" , collectionImage: UIImage(named: "collection5.jpg")))
+        
     }
+    //Slider
     func createSlider() {
         
         let banner1 = Slider(BannerSlider: "Banner1", imageSlider: UIImage(named: "movie1.jpeg")!)
@@ -71,25 +75,31 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         mySlider.append(banner4)
         mySlider.append(banner5)
     }
-        
+    //Details
     func createData(){
             
-        let harryPotter = movies(nameMovies: "Harry Potter", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB POINT 1", imageMovies: UIImage(named: "harrypotter.jpg")!)
+        let harryPotter = movies(nameMovies: "Harry Potter", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB 1", imageMovies: UIImage(named: "harrypotter.jpg")!)
         
         
-        let yuzuklerinEfendisi = movies(nameMovies: "Yüzüklerin Efendisi", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB POINT 2", imageMovies: UIImage(named: "yuzuklerinEfendisi.jpg")!)
+        let yuzuklerinEfendisi = movies(nameMovies: "Yüzüklerin Efendisi", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB 2", imageMovies: UIImage(named: "yuzuklerinEfendisi.jpg")!)
         
         
-        let meBeforeYou = movies(nameMovies: "Me Before You", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB POINT 3", imageMovies: UIImage(named: "mebeforeyou.jpg")!)
+        let meBeforeYou = movies(nameMovies: "Me Before You", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB 3", imageMovies: UIImage(named: "mebeforeyou.jpg")!)
         
         
-        let parcalamis = movies(nameMovies: "Parcalanmis", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB POINT 4", imageMovies: UIImage(named: "parcalanmis.jpg")!)
+        let parcalamis = movies(nameMovies: "Parcalanmis", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB 4", imageMovies: UIImage(named: "parcalanmis.jpg")!)
         
         
-        let gladiator = movies(nameMovies: "Gladiator", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB POINT 5", imageMovies: UIImage(named: "gladiator.jpg")!)
+        let gladiator = movies(nameMovies: "Gladiator", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB 5", imageMovies: UIImage(named: "gladiator.jpg")!)
         
         
-        let benjaminButton = movies(nameMovies: "Benjamin Button'ın Tuhaf Hikayesi", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB POINT 6", imageMovies: UIImage(named: "benjaminButton.jpg")!)
+        let benjaminButton = movies(nameMovies: "Benjamin Button'ın Tuhaf Hikayesi", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB 6", imageMovies: UIImage(named: "benjaminButton.jpg")!)
+        
+        let harryPotter2 = movies(nameMovies: "Harry Potter", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB 1", imageMovies: UIImage(named: "harrypotter.jpg")!)
+        
+        
+        let yuzuklerinEfendis2 = movies(nameMovies: "Yüzüklerin Efendisi", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", pointMovies: "IMDB 2", imageMovies: UIImage(named: "yuzuklerinEfendisi.jpg")!)
+        
         
         myMovies.append(harryPotter)
         myMovies.append(yuzuklerinEfendisi)
@@ -97,6 +107,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         myMovies.append(parcalamis)
         myMovies.append(gladiator)
         myMovies.append(benjaminButton)
+        myMovies.append(harryPotter2)
+        myMovies.append(yuzuklerinEfendis2)
 
     }
 
@@ -108,14 +120,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
        
         if indexPath.row == 0 {
             //slider cell
-            if let cell = tableView.dequeueReusableCell(withIdentifier: SliderCollectionViewCell.identifier, for: indexPath) as? SliderCollectionViewCell
+            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: SliderTableViewCell.identifier, for: indexPath) as? SliderTableViewCell
             {
-                cell.setupCell(slider: mySlider[indexPath.row])
-                
+                cell.setupCell(sliderView: mySlider)
+                return cell
             }
         }
-    
-        
         else if indexPath.row == 1 {
           //  CollectionTableViewCell
             
