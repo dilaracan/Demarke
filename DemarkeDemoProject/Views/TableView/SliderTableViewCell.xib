@@ -17,9 +17,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="410" height="243"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NUV-NZ-dRM">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NUV-NZ-dRM">
                         <rect key="frame" x="0.0" y="0.0" width="410" height="199"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="199" id="3I3-mP-eIG"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ql5-j9-Kj9">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -27,13 +30,10 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rpo-WB-3jH">
-                        <rect key="frame" x="0.0" y="0.0" width="410" height="199"/>
-                    </imageView>
                     <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7VU-uM-Ev8">
                         <rect key="frame" x="36" y="161" width="339" height="28"/>
                     </pageControl>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  En Cok Izlenen Filmler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hs-aY-bpk">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  En Cok Izlenen Filmler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hs-aY-bpk">
                         <rect key="frame" x="0.0" y="208" width="410" height="22"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
@@ -41,27 +41,19 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="7VU-uM-Ev8" firstAttribute="centerX" secondItem="7hs-aY-bpk" secondAttribute="centerX" id="7Rj-X2-xOM"/>
-                    <constraint firstItem="rpo-WB-3jH" firstAttribute="trailing" secondItem="NUV-NZ-dRM" secondAttribute="trailing" id="DMu-rv-hHX"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="7hs-aY-bpk" secondAttribute="bottom" constant="2" id="Hyo-D3-xPd"/>
-                    <constraint firstItem="rpo-WB-3jH" firstAttribute="leading" secondItem="7hs-aY-bpk" secondAttribute="leading" id="JYt-U4-nIe"/>
-                    <constraint firstItem="NUV-NZ-dRM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JZ0-0R-Yj9"/>
-                    <constraint firstItem="7hs-aY-bpk" firstAttribute="top" secondItem="7VU-uM-Ev8" secondAttribute="bottom" constant="19" id="JiY-CH-Rgl"/>
-                    <constraint firstItem="NUV-NZ-dRM" firstAttribute="bottom" secondItem="rpo-WB-3jH" secondAttribute="bottom" id="Odg-4Q-clH"/>
-                    <constraint firstItem="7VU-uM-Ev8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="S6z-0U-hQX"/>
-                    <constraint firstAttribute="trailing" secondItem="rpo-WB-3jH" secondAttribute="trailing" id="Vtv-SY-dUi"/>
-                    <constraint firstItem="NUV-NZ-dRM" firstAttribute="trailing" secondItem="7hs-aY-bpk" secondAttribute="trailing" id="ZPK-LW-cNt"/>
-                    <constraint firstItem="NUV-NZ-dRM" firstAttribute="leading" secondItem="rpo-WB-3jH" secondAttribute="leading" id="a9U-YT-4ho"/>
-                    <constraint firstItem="7hs-aY-bpk" firstAttribute="top" secondItem="NUV-NZ-dRM" secondAttribute="bottom" constant="9" id="bW6-pc-pX0"/>
-                    <constraint firstItem="NUV-NZ-dRM" firstAttribute="top" secondItem="rpo-WB-3jH" secondAttribute="top" id="bfk-K6-fcj"/>
-                    <constraint firstItem="rpo-WB-3jH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hnq-pf-lu2"/>
+                    <constraint firstItem="7VU-uM-Ev8" firstAttribute="centerX" secondItem="7hs-aY-bpk" secondAttribute="centerX" id="4tr-Uw-Ysb"/>
+                    <constraint firstItem="7hs-aY-bpk" firstAttribute="top" secondItem="7VU-uM-Ev8" secondAttribute="bottom" constant="19" id="G2R-f9-7ez"/>
+                    <constraint firstItem="7VU-uM-Ev8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="YAa-gH-S5A"/>
+                    <constraint firstItem="NUV-NZ-dRM" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="c5i-eN-xHa"/>
+                    <constraint firstItem="7hs-aY-bpk" firstAttribute="top" secondItem="NUV-NZ-dRM" secondAttribute="bottom" constant="9" id="ert-io-HFc"/>
+                    <constraint firstItem="NUV-NZ-dRM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-20" id="g0k-ea-Mcm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="7hs-aY-bpk" secondAttribute="bottom" constant="2" id="zEl-LB-n5M"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="NUV-NZ-dRM" id="pYx-H2-JMy"/>
                 <outlet property="pageControl" destination="7VU-uM-Ev8" id="xCj-lz-n7A"/>
-                <outlet property="sliderImageView" destination="rpo-WB-3jH" id="1oJ-Jh-Cnx"/>
             </connections>
             <point key="canvasLocation" x="-82.608695652173921" y="98.772321428571431"/>
         </tableViewCell>

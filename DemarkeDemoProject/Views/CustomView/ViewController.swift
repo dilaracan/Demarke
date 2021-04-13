@@ -49,26 +49,26 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     //Collection
     func createCollection (){
         
-        myModel.append(Model(collectionText: "1", collectionImage: UIImage(named: "collection1.jpg")!))
-        myModel.append(Model(collectionText: "2", collectionImage: UIImage(named: "collection2.jpg")!))
-        myModel.append(Model(collectionText: "3", collectionImage: UIImage(named: "collection3.jpg")!))
-        myModel.append(Model(collectionText: "4", collectionImage: UIImage(named: "collection4.jpg")!))
-        myModel.append(Model(collectionText: "5", collectionImage: UIImage(named: "collection5.jpg")!))
-        myModel.append(Model(collectionText: "6", collectionImage: UIImage(named: "collection1.jpg")!))
-        myModel.append(Model(collectionText: "7", collectionImage: UIImage(named: "collection2.jpg")!))
-        myModel.append(Model(collectionText: "8", collectionImage: UIImage(named: "collection3.jpg")!))
-        myModel.append(Model(collectionText: "9", collectionImage: UIImage(named: "collection4.jpg")!))
-        myModel.append(Model(collectionText: "0", collectionImage: UIImage(named: "collection5.jpg")!))
+        myModel.append(Model(collectionText: "1", collectionImage: UIImage(named: "collection1")!))
+        myModel.append(Model(collectionText: "2", collectionImage: UIImage(named: "collection2")!))
+        myModel.append(Model(collectionText: "3", collectionImage: UIImage(named: "collection3")!))
+        myModel.append(Model(collectionText: "4", collectionImage: UIImage(named: "collection4")!))
+        myModel.append(Model(collectionText: "5", collectionImage: UIImage(named: "collection5")!))
+        myModel.append(Model(collectionText: "6", collectionImage: UIImage(named: "collection1")!))
+        myModel.append(Model(collectionText: "7", collectionImage: UIImage(named: "collection2")!))
+        myModel.append(Model(collectionText: "8", collectionImage: UIImage(named: "collection3")!))
+        myModel.append(Model(collectionText: "9", collectionImage: UIImage(named: "collection4")!))
+        myModel.append(Model(collectionText: "0", collectionImage: UIImage(named: "collection5")!))
         
     }
     //Slider
     func createSlider() {
         
-        let banner1 = Slider(BannerSlider: "Banner1", imageSlider: UIImage(named: "movie1.jpeg")!)
-        let banner2 = Slider(BannerSlider: "Banner2", imageSlider: UIImage(named: "movie2.jpeg")!)
-        let banner3 = Slider(BannerSlider: "Banner3", imageSlider: UIImage(named: "movie3.jpeg")!)
-        let banner4 = Slider(BannerSlider: "Banner4", imageSlider: UIImage(named: "movie4.jpeg")!)
-        let banner5 = Slider(BannerSlider: "Banner5", imageSlider: UIImage(named: "movie5.jpeg")!)
+        let banner1 = Slider(BannerSlider: "banner1", imageSlider: UIImage(named: "banner1")!)
+        let banner2 = Slider(BannerSlider: "Banner2", imageSlider: UIImage(named: "banner2")!)
+        let banner3 = Slider(BannerSlider: "Banner3", imageSlider: UIImage(named: "banner3")!)
+        let banner4 = Slider(BannerSlider: "Banner4", imageSlider: UIImage(named: "banner4")!)
+        let banner5 = Slider(BannerSlider: "Banner5", imageSlider: UIImage(named: "banner5")!)
         
         mySlider.append(banner1)
         mySlider.append(banner2)
@@ -78,8 +78,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     //Details
     func createData(){
-            
-        let harryPotter = movies(nameMovies: "   Harry Potter", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.", pointMovies: "IMDB 1", imageMovies: UIImage(named: "harrypotter.jpg")!)
+        
+        let harryPotter = movies(nameMovies: "  Harry Potter", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.", pointMovies: "IMDB 1", imageMovies: UIImage(named: "harrypotter.jpg")!)
         
         
         let yuzuklerinEfendisi = movies(nameMovies: "   Yüzüklerin Efendisi", detailsMovies: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.", pointMovies: "IMDB 2", imageMovies: UIImage(named: "yuzuklerinEfendisi.jpg")!)
@@ -161,6 +161,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         return UITableViewCell()
     }
+    
+    
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250.0

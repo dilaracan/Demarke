@@ -26,19 +26,21 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
     
     func setupCell(sliderView: [Slider]){
         self.sliderCell = sliderView
+        self.mySlider = sliderView
         
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
         collectionView.register(SliderCollectionViewCell.nib(), forCellWithReuseIdentifier: SliderCollectionViewCell.identifier)
+    
         collectionView.delegate = self
         collectionView.dataSource = self
         
         pageControl.numberOfPages = mySlider.count
         pageControl.currentPage = 0
+        
      /*
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
@@ -89,14 +91,9 @@ class SliderTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-      
-        if let vc = cell.viewWithTag(111) as? UIImageView{
-            vc.image = mySlider[indexPath.row].image
-        }
-        else if let ab = cell.viewWithTag(222) as? UIPageControl {
-            ab.currentPage = indexPath.row
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell", for: indexPath) as! SliderCollectionViewCell
+            cell.setupCell(slider: mySlider[indexPath.row])
+        
         return cell
     }
     

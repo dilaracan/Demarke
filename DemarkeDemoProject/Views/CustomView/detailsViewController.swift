@@ -15,7 +15,6 @@ class detailsViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     
     @IBOutlet var moviesDetailsLabel: UILabel!
     @IBOutlet var moviesNameLabel: UILabel!
-   // @IBOutlet var moviesPointLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var detailsTableView: UITableView!
     var selectedMovies : movies?
@@ -25,7 +24,6 @@ class detailsViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         
         moviesNameLabel.text = selectedMovies?.name
         moviesDetailsLabel.text = selectedMovies?.details
-//        moviesPointLabel.text = selectedMovies?.point
         imageView.image = selectedMovies?.image
         
         initVars()
